@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#botao{
+            font: normal 15pt Arial;
+            background-color: rgb(149, 77, 149);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        } 
+    </style>
+</head>
+<body>
+    <div id="botao">
+        Interaja...
+    </div>
+
+    <script>
+        var btn = document.getElementById("botao")
+
+        btn.addEventListener("click", clicar )
+        btn.addEventListener("mouseenter", entrar)
+        btn.addEventListener("mouseout", sair)
+        
+        function clicar(){
+            btn.innerText = "Clicou! "
+            btn.style.backgroundColor = "purple"
+        }
+
+        function entrar(){
+            btn.innerText = "Entrou!"
+        }
+
+        function sair(){
+            btn.innerText = "Saiu!"
+            btn.style.backgroundColor = "rgb(149, 77, 149)"
+        }
+    </script>
+</body>
+</html>
