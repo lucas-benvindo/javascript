@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados com JS</title>
+    <style>
+        body{
+            font: normal 12pt Arial;
+        }
+        button#btn{
+            height: 80px;
+            width: 210px;
+            font: normal 12pt Arial;
+            background-color: lightcoral;
+            border-radius: 10px;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com números</h1>
+    <button id="btn">Clique para calcular</button>
+    <div id="res">O resultado vem aqui...</div>
+
+    <script>
+        window.alert("Seja bem-vindo(a) ao meu site!")
+        document.getElementById("btn").addEventListener("click", calcular)
+
+        function calcular(){
+            var n = Number(window.prompt("Digite um número:"))
+            var dbr = n * 2
+            var mtd = n / 2
+            document.getElementById("res").innerText = `O dobro de ${n} é ${dbr} e a metade é ${mtd}`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação JS</title>
+    <style>
+        body{
+            font: normal 12pt Arial;
+        }
+        button#btn{
+            height: 80px;
+            width: 165px;
+            background-color: rgb(198, 111, 198);
+            font-size: 12pt;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interagindo com um botão</h1>
+    <button id="btn">Clica em mim!</button>
+
+    <script>
+        var botao = document.getElementById("btn")
+        botao.addEventListener("click", clicar)
+        
+        function clicar(){
+            window.alert("Você clicou no botão!")
+        }
+    </script>
+</body>
+</html>
